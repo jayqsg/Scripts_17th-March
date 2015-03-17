@@ -172,13 +172,14 @@ public class SearchPage extends FluentWebDriverPage {
     }
 
     public void clickMoney(){
-        try{
-            WaitUtil.simpleSleep(10000);
-            findElement(By.xpath("//div[@id='mainSearchItems']/div/ul/li/label/span/strong[contains(text(),'Money')]")).click();
-        } catch (NoSuchElementException e){
-            LoginRealConnexPage.gStrReason = LoginRealConnexPage.gStrReason +"; "+"Unable to click on Money link\n";
-        }
+            try{
+                WaitUtil.simpleSleep(10000);
+                findElement(By.xpath("//div[@id='mainSearchItems']/div/ul/li/label/span/strong[text()='Money & Buyers']")).click();
+            } catch (NoSuchElementException e){
+                LoginRealConnexPage.gStrReason = LoginRealConnexPage.gStrReason +"; "+"Unable to click on Money & Buyers link\n";
+            }
     }
+
 
     public void clickEquity(){
         try{
